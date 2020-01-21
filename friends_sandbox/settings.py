@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '1kt&*)=g$a7v=0y%ot+p-(#_3l(v2%e#44n$%82gs!y)g57$d('
+SECRET_KEY = '&4xsrk832nahjr%dt2^=8)w4)3kkr8r^=npu4r^=$)m2g5hd&n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,8 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'friendship'
-
 ]
 
 MIDDLEWARE = [
@@ -121,3 +119,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
